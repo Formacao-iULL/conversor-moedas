@@ -1,0 +1,32 @@
+#listagem {
+    max-width: 900px;
+    margin: auto;
+    padding: 3rem;
+
+    .search__group{
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+
+        input {
+            border: 1px solid #9fe870;
+            border-radius: 1.25rem;
+            padding: .75rem 2rem;
+        }
+    }
+
+
+    .table {
+        background-color: #edefeb;
+        padding: 1rem;
+        border-radius: 1.5rem;
+    }
+
+    .paginator {
+        padding: 1rem 0;
+    }
+
+    
+}

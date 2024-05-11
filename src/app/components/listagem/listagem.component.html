@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<section id="listagem">
+    <div class="search__group">
+        <input type="text" placeholder="Código ou nome">
+        <app-button [buttonText]="'Pesquisar'"></app-button>
+    </div>
+
+    <mat-table class="table" [dataSource]="paginatedCurrencies">
+        <ng-container matColumnDef="code">
+            <mat-header-cell *matHeaderCellDef> Código </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element[0]}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> Nome </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element[1]}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+    <mat-paginator class="paginator" #paginator [length]="totalLength" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChange($event)"></mat-paginator>
+</section>
