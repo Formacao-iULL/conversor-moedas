@@ -3,7 +3,9 @@
     background-color: #163300;
     padding: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     .card {
         height: fit-content;
@@ -82,4 +84,22 @@
         }
 
     }
+}
+
+#historico {
+  max-width: 1380px;
+  margin: auto;
+  padding: 3rem;
+
+  .table {
+    background-color: #edefeb;
+    padding: 1rem;
+    border-radius: 1.5rem;
+
+    button {
+      border: 0;
+      padding: 0;
+      margin: 0;
+    }
+  }
 }
